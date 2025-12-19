@@ -5,6 +5,8 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Footer from './components/Footer';
+import { Analytics } from '@vercel/analytics/next';
+
 
 const App: React.FC = () => {
   return (
@@ -15,6 +17,7 @@ const App: React.FC = () => {
         <About />
         <Skills />
         <Experience />
+        <Analytics />
       </main>
       <Footer />
     </div>
