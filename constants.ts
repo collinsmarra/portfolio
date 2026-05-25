@@ -6,6 +6,7 @@ export const PERSONAL_INFO = {
   location: "Nairobi, Kenya",
   email: "collinskiplagat8@gmail.com",
   phone: "+254 710 655 304",
+  resume: "https://drive.google.com/file/d/1Uum0qKtpTMOer7aUvS2iBaj0aao47kpm/view?usp=sharing",
   summary: "I am a dedicated Software Developer currently working full-time at Guru Solutions, focusing on building robust .NET applications. I am also actively rebuilding StoreYako.com, a cloud-based inventory management system, leveraging the performance of Rust for the backend and TypeScript for a responsive, modern frontend. I am passionate about creating efficient, scalable software and solving complex technical challenges."
 };
 
@@ -23,7 +24,7 @@ export const EXPERIENCES: Experience[] = [
     role: "Software Developer",
     company: "StoreYako",
     period: "2023 - Present",
-    description: "Currently rebuilding the platform to enhance performance and scalability. Migrating the backend to Rust to leverage its safety and speed, while re-engineering the frontend using TypeScript to deliver a seamless user experience.",
+    description: "Successfully rebuilt the platform, currently in beta testing. Migrated the backend to Rust for high performance and safety, and re-engineered the frontend using TypeScript for a modern, responsive user experience.",
     technologies: ["Rust", "TypeScript", "React"]
   },
   {
@@ -40,7 +41,6 @@ export const SKILLS: Skill[] = [
   { name: "Rust", category: "Language" },
   { name: "C#", category: "Language" },
   { name: "TypeScript", category: "Language" },
-  { name: "Python", category: "Language" },
   { name: "SQL (Postgres)", category: "Language" },
   
   { name: "ASP.NET Core", category: "Platform" },

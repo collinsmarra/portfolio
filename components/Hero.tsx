@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MapPin, ChevronDown, ShieldCheck } from 'lucide-react';
+import { Mail, MapPin, ChevronDown, ShieldCheck, Download } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 
 const Hero: React.FC = () => {
@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
               {PERSONAL_INFO.name}
             </h1>
-            <p className="text-xl md:text-2xl text-slate-400 font-light">
+            <p className="text-2xl md:text-3xl text-slate-400 font-medium mb-6">
               {PERSONAL_INFO.title}
             </p>
           </div>
@@ -35,12 +35,15 @@ const Hero: React.FC = () => {
               <Mail className="mr-2 h-5 w-5" />
               Contact Me
             </a>
-            <button 
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+            <a
+              href={PERSONAL_INFO.resume}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 border border-slate-700 text-base font-medium rounded-md text-slate-300 bg-transparent hover:bg-slate-800 transition-all duration-300"
             >
-              Learn More
-            </button>
+              <Download className="mr-2 h-5 w-5" />
+              Download Resume
+            </a>
           </div>
 
           <div className="flex items-center justify-center md:justify-start space-x-6 text-slate-400 text-sm">

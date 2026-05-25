@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, FileText } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 
 const Header: React.FC = () => {
@@ -32,7 +32,7 @@ const Header: React.FC = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-dark/90 backdrop-blur-md shadow-md border-b border-slate-800' : 'bg-transparent'
+        isScrolled ? 'bg-dark/80 backdrop-blur-xl shadow-md border-b border-slate-800' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
           </div>
           
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 items-center">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -55,6 +55,16 @@ const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            <a
+                href={PERSONAL_INFO.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-300 hover:text-primary transition-colors flex items-center text-sm font-medium"
+                title="View Resume"
+            >
+                <FileText className="h-4 w-4 mr-1" />
+                Resume
+            </a>
             <a 
                 href={`mailto:${PERSONAL_INFO.email}`} 
                 className="px-4 py-2 rounded-md bg-primary text-white text-sm font-medium hover:bg-primary/90 transition-colors"
@@ -89,6 +99,15 @@ const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            <a
+                href={PERSONAL_INFO.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700"
+            >
+                <FileText className="h-5 w-5 mr-3" />
+                View Resume
+            </a>
              <a 
                 href={`mailto:${PERSONAL_INFO.email}`} 
                 className="block px-3 py-2 mt-4 text-center rounded-md bg-primary text-white text-base font-medium hover:bg-primary/90"
