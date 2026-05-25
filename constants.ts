@@ -6,6 +6,7 @@ export const PERSONAL_INFO = {
   location: "Nairobi, Kenya",
   email: "collinskiplagat8@gmail.com",
   phone: "+254 710 655 304",
+  resume: "https://drive.google.com/file/d/1Uum0qKtpTMOer7aUvS2iBaj0aao47kpm/view?usp=sharing",
   summary: "I am a dedicated Software Developer currently working full-time at Guru Solutions, focusing on building robust .NET applications. I am also actively rebuilding StoreYako.com, a cloud-based inventory management system, leveraging the performance of Rust for the backend and TypeScript for a responsive, modern frontend. I am passionate about creating efficient, scalable software and solving complex technical challenges."
 };
 
