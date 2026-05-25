@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-dark overflow-hidden pt-16">
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 no-print">
         <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
       </div>
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block no-print">
         <ChevronDown className="h-8 w-8 text-slate-500" />
       </div>
     </div>
