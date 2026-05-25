@@ -23,7 +23,7 @@ export const EXPERIENCES: Experience[] = [
     role: "Software Developer",
     company: "StoreYako",
     period: "2023 - Present",
-    description: "Currently rebuilding the platform to enhance performance and scalability. Migrating the backend to Rust to leverage its safety and speed, while re-engineering the frontend using TypeScript to deliver a seamless user experience.",
+    description: "Successfully rebuilt the platform, currently in beta testing. Migrated the backend to Rust for high performance and safety, and re-engineered the frontend using TypeScript for a modern, responsive user experience.",
     technologies: ["Rust", "TypeScript", "React"]
   },
   {
@@ -40,7 +40,6 @@ export const SKILLS: Skill[] = [
   { name: "Rust", category: "Language" },
   { name: "C#", category: "Language" },
   { name: "TypeScript", category: "Language" },
-  { name: "Python", category: "Language" },
   { name: "SQL (Postgres)", category: "Language" },
   
   { name: "ASP.NET Core", category: "Platform" },
