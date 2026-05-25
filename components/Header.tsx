@@ -32,7 +32,7 @@ const Header: React.FC = () => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-dark/90 backdrop-blur-md shadow-md border-b border-slate-800' : 'bg-transparent'
+        isScrolled ? 'bg-dark/80 backdrop-blur-xl shadow-md border-b border-slate-800' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
           </div>
           
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 items-center">
             {navLinks.map((link) => (
               <a
                 key={link.name}
