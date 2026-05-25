@@ -45,7 +45,7 @@ export const SKILLS: Skill[] = [
   
   { name: "ASP.NET Core", category: "Platform" },
   { name: "Blazor", category: "Platform" },
-  { name: "NextJs & ReactJs", category: "Platform" },
+  { name: "ReactJs", category: "Platform" },
   { name: "Axum", category: "Platform" },
 
   { name: "Linux", category: "Core" },
