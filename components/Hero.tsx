@@ -1,12 +1,12 @@
 import React from 'react';
-import { Mail, MapPin, ChevronDown, ShieldCheck } from 'lucide-react';
+import { Mail, MapPin, ChevronDown, ShieldCheck, Printer } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 
 const Hero: React.FC = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-dark overflow-hidden pt-16">
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 no-print">
         <div className="absolute top-[-10%] right-[-5%] w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
       </div>
@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
               {PERSONAL_INFO.name}
             </h1>
-            <p className="text-xl md:text-2xl text-slate-400 font-light">
+            <p className="text-2xl md:text-3xl text-slate-400 font-medium mb-6">
               {PERSONAL_INFO.title}
             </p>
           </div>
@@ -36,10 +36,11 @@ const Hero: React.FC = () => {
               Contact Me
             </a>
             <button 
-              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              className="inline-flex items-center justify-center px-6 py-3 border border-slate-700 text-base font-medium rounded-md text-slate-300 bg-transparent hover:bg-slate-800 transition-all duration-300"
+              onClick={() => window.print()}
+              className="inline-flex items-center justify-center px-6 py-3 border border-slate-700 text-base font-medium rounded-md text-slate-300 bg-transparent hover:bg-slate-800 transition-all duration-300 no-print"
             >
-              Learn More
+              <Printer className="mr-2 h-5 w-5" />
+              Print Resume
             </button>
           </div>
 
@@ -69,7 +70,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block no-print">
         <ChevronDown className="h-8 w-8 text-slate-500" />
       </div>
     </div>

@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @media print {
+    @page {
+      size: auto;
+      margin: 1cm;
+    }
+
+    body {
+      background: white !important;
+      color: black !important;
+      -webkit-print-color-adjust: exact;
+      font-size: 11pt;
+    }
+
+    .no-print {
+      display: none !important;
+    }
+
+    /* Clean design for print: remove shadows, gradients and colored backgrounds */
+    .bg-card, .bg-slate-900\/50, .bg-slate-950, .bg-dark {
+      background: white !important;
+      background-image: none !important;
+      box-shadow: none !important;
+      border-color: #e2e8f0 !important; /* slate-200 */
+    }
+
+    .text-white, .text-slate-300, .text-slate-400, .text-slate-500 {
+      color: black !important;
+    }
+
+    .text-primary, .text-secondary {
+      color: #0ea5e9 !important; /* keep primary color but maybe tone it down? */
+    }
+
+    /* Optimize layout */
+    .grid {
+      display: block !important;
+    }
+
+    .flex {
+      display: flex !important;
+    }
+
+    .break-inside-avoid {
+      break-inside: avoid;
+    }
+
+    section {
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+      page-break-after: auto;
+    }
+
+    h1 { font-size: 24pt !important; margin-bottom: 0.5rem !important; }
+    h2 { font-size: 18pt !important; margin-top: 1.5rem !important; margin-bottom: 1rem !important; border-bottom: 1px solid #e2e8f0; }
+    h3 { font-size: 14pt !important; margin-top: 1rem !important; margin-bottom: 0.5rem !important; }
+
+    .rounded-full, .rounded-xl, .rounded-2xl {
+      border-radius: 0 !important;
+    }
+  }
+}

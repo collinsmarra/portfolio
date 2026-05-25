@@ -5,8 +5,8 @@ import { PERSONAL_INFO } from '../constants';
 const About: React.FC = () => {
   return (
     <Section id="about" className="bg-dark">
-      <div className="bg-card rounded-2xl p-8 md:p-12 border border-slate-700 shadow-2xl relative">
-        <div className="absolute -top-6 left-8 bg-primary text-white px-4 py-2 rounded-lg font-bold shadow-lg">
+      <div className="bg-card rounded-2xl p-8 md:p-12 border border-slate-800 shadow-2xl relative">
+        <div className="absolute -top-6 left-8 bg-primary text-white px-4 py-2 rounded-lg font-bold shadow-lg shadow-primary/20">
           About Me
         </div>
         <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
