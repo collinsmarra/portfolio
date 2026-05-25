@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Printer } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 
 const Header: React.FC = () => {
@@ -31,8 +31,8 @@ const Header: React.FC = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-dark/90 backdrop-blur-md shadow-md border-b border-slate-800' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 no-print ${
+        isScrolled ? 'bg-dark/80 backdrop-blur-xl shadow-md border-b border-slate-800' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,6 +55,13 @@ const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            <button
+                onClick={() => window.print()}
+                className="text-slate-300 hover:text-primary transition-colors p-2"
+                title="Print Resume"
+            >
+                <Printer className="h-5 w-5" />
+            </button>
             <a 
                 href={`mailto:${PERSONAL_INFO.email}`} 
                 className="px-4 py-2 rounded-md bg-primary text-white text-sm font-medium hover:bg-primary/90 transition-colors"
@@ -89,6 +96,13 @@ const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            <button
+                onClick={() => window.print()}
+                className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700"
+            >
+                <Printer className="h-5 w-5 mr-3" />
+                Print Resume
+            </button>
              <a 
                 href={`mailto:${PERSONAL_INFO.email}`} 
                 className="block px-3 py-2 mt-4 text-center rounded-md bg-primary text-white text-base font-medium hover:bg-primary/90"
