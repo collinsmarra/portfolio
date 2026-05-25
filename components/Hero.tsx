@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MapPin, ChevronDown, ShieldCheck, Download } from 'lucide-react';
+import { Mail, MapPin, ChevronDown, ShieldCheck, Download, Printer } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 
 const Hero: React.FC = () => {
@@ -14,9 +14,11 @@ const Hero: React.FC = () => {
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center md:text-left grid md:grid-cols-2 gap-12 items-center">
         <div className="order-2 md:order-1 space-y-8">
           <div className="space-y-2">
-            <h2 className="text-primary font-semibold tracking-wide uppercase text-sm">Portfolio</h2>
+            <h2 className="text-primary font-semibold tracking-wide uppercase text-sm no-print">Portfolio</h2>
             <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight">
-              {PERSONAL_INFO.name}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] animate-gradient-x">
+                {PERSONAL_INFO.name}
+              </span>
             </h1>
             <p className="text-2xl md:text-3xl text-slate-400 font-medium mb-6">
               {PERSONAL_INFO.title}
@@ -27,7 +29,7 @@ const Hero: React.FC = () => {
             A dedicated software developer building robust backend systems and intuitive user experiences.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center md:justify-start no-print">
             <a 
               href={`mailto:${PERSONAL_INFO.email}`}
               className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/20"
@@ -44,6 +46,13 @@ const Hero: React.FC = () => {
               <Download className="mr-2 h-5 w-5" />
               Download Resume
             </a>
+            <button
+              onClick={() => window.print()}
+              className="inline-flex items-center justify-center px-6 py-3 border border-slate-700 text-base font-medium rounded-md text-slate-300 bg-transparent hover:bg-slate-800 transition-all duration-300"
+            >
+              <Printer className="mr-2 h-5 w-5" />
+              Print Resume
+            </button>
           </div>
 
           <div className="flex items-center justify-center md:justify-start space-x-6 text-slate-400 text-sm">
@@ -59,7 +68,7 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="order-1 md:order-2 flex justify-center">
-           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-primary to-secondary p-1">
+           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-tr from-primary to-secondary p-1 animate-float">
               <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center overflow-hidden relative">
                   <span className="text-9xl font-bold text-slate-800 select-none">CK</span>
                   <img 
