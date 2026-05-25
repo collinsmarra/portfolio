@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, FileText } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 
 const Header: React.FC = () => {
@@ -55,6 +55,16 @@ const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            <a
+                href={PERSONAL_INFO.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-300 hover:text-primary transition-colors flex items-center text-sm font-medium"
+                title="View Resume"
+            >
+                <FileText className="h-4 w-4 mr-1" />
+                Resume
+            </a>
             <a 
                 href={`mailto:${PERSONAL_INFO.email}`} 
                 className="px-4 py-2 rounded-md bg-primary text-white text-sm font-medium hover:bg-primary/90 transition-colors"
@@ -89,6 +99,15 @@ const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            <a
+                href={PERSONAL_INFO.resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700"
+            >
+                <FileText className="h-5 w-5 mr-3" />
+                View Resume
+            </a>
              <a 
                 href={`mailto:${PERSONAL_INFO.email}`} 
                 className="block px-3 py-2 mt-4 text-center rounded-md bg-primary text-white text-base font-medium hover:bg-primary/90"

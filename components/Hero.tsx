@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MapPin, ChevronDown, ShieldCheck } from 'lucide-react';
+import { Mail, MapPin, ChevronDown, ShieldCheck, Download } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 
 const Hero: React.FC = () => {
@@ -36,14 +36,13 @@ const Hero: React.FC = () => {
               Contact Me
             </a>
             <a
-              href="#about"
+              href={PERSONAL_INFO.resume}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 border border-slate-700 text-base font-medium rounded-md text-slate-300 bg-transparent hover:bg-slate-800 transition-all duration-300"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
-              }}
             >
-              Learn More
+              <Download className="mr-2 h-5 w-5" />
+              Download Resume
             </a>
           </div>
 
