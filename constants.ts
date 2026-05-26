@@ -7,7 +7,7 @@ export const PERSONAL_INFO = {
   email: "collinskiplagat8@gmail.com",
   phone: "+254 710 655 304",
   resume: "https://drive.google.com/file/d/1Uum0qKtpTMOer7aUvS2iBaj0aao47kpm/view?usp=sharing",
-  summary: "I am a dedicated Software Developer currently working full-time at Guru Solutions, focusing on building robust .NET applications. I am also actively rebuilding StoreYako.com, a cloud-based inventory management system, leveraging the performance of Rust for the backend and TypeScript for a responsive, modern frontend. I am passionate about creating efficient, scalable software and solving complex technical challenges."
+  summary: "I am a dedicated Software Developer currently working full-time at Guru Solutions, focusing on building robust .NET applications. In my free time, I am a hobbyist who loves creating and working on personal projects, such as StoreYako.com. I am passionate about creating efficient, scalable software and solving complex technical challenges using Rust and TypeScript."
 };
 
 export const EXPERIENCES: Experience[] = [
@@ -24,7 +24,7 @@ export const EXPERIENCES: Experience[] = [
     role: "Software Developer",
     company: "StoreYako",
     period: "2023 - Present",
-    description: "Successfully rebuilt the platform, currently in beta testing. Migrated the backend to Rust for high performance and safety, and re-engineered the frontend using TypeScript for a modern, responsive user experience.",
+    description: "Successfully rebuilt the platform, currently in beta testing in my local town (www.storeyako.com). Migrated the backend to Rust for high performance and safety, and re-engineered the frontend using TypeScript for a modern, responsive user experience.",
     technologies: ["Rust", "TypeScript", "React"]
   },
   {
