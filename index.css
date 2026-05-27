@@ -1,3 +1,95 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .no-print {
+    @media print {
+      display: none !important;
+    }
+  }
+}
+
+@media print {
+  @page {
+    margin: 1cm;
+    size: auto;
+  }
+
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 11pt;
+  }
+
+  /* Reset layout for print */
+  .min-h-screen {
+    min-height: auto !important;
+  }
+
+  section {
+    padding: 0 !important;
+    margin-bottom: 2rem !important;
+    page-break-inside: avoid;
+  }
+
+  /* Ensure cards look good on white background */
+  .bg-dark, .bg-card, .bg-slate-900\/50 {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .text-white, .text-slate-300, .text-slate-400 {
+    color: black !important;
+  }
+
+  .text-primary, .text-secondary {
+    color: #0284c7 !important; /* Keep primary color for headings */
+  }
+
+  .border-slate-800, .border-slate-700 {
+    border-color: #eee !important;
+  }
+
+  /* Adjust Hero for resume header */
+  .pt-16 {
+    padding-top: 0 !important;
+  }
+
+  /* Force grid columns to look correct if necessary or just let them stack */
+  .grid {
+    display: block !important;
+  }
+
+  .grid-cols-2, .md\:grid-cols-2, .md\:grid-cols-3, .md\:grid-cols-4, .lg\:grid-cols-5 {
+    display: block !important;
+  }
+
+  /* Specific tweaks for sections */
+  #about, #skills, #experience {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .rounded-2xl, .rounded-xl, .rounded-lg {
+    border-radius: 0 !important;
+  }
+
+  /* Skill cards as a simple list for print */
+  #skills .grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+
+  #skills .group {
+    border: 1px solid #eee !important;
+    padding: 0.25rem 0.5rem !important;
+    margin: 0 !important;
+  }
+
+  /* Education and Awards */
+  .space-y-12 > div {
+    margin-bottom: 1.5rem !important;
+  }
+}
