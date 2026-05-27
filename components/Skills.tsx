@@ -19,7 +19,7 @@ const Skills: React.FC = () => {
         {SKILLS.map((skill) => (
           <div 
             key={skill.name}
-            className="group flex items-center p-3 bg-card border border-slate-800 rounded-lg hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 break-inside-avoid"
+            className="group flex items-center p-3 bg-card border border-slate-800 rounded-lg hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 break-inside-avoid hover:scale-105 transform"
           >
             <div className={`p-3 rounded-md mr-4 bg-slate-800 group-hover:bg-primary/20 group-hover:text-primary transition-colors text-slate-400`}>
               {getIcon(skill.category)}
