@@ -15,7 +15,7 @@ const Experience: React.FC = () => {
           </h3>
           <div className="relative border-l border-slate-800 ml-3 space-y-12">
             {EXPERIENCES.map((exp, index) => (
-              <div key={exp.id} className="relative pl-8 md:pl-12 break-inside-avoid">
+              <div key={exp.id} className="relative pl-8 md:pl-12 break-inside-avoid hover:scale-[1.02] transition-transform duration-300">
                 <span className="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-slate-900"></span>
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                     <h4 className="text-xl font-bold text-white">{exp.role}</h4>
