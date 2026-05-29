@@ -15,8 +15,8 @@ const Experience: React.FC = () => {
           </h3>
           <div className="relative border-l border-slate-800 ml-3 space-y-12">
             {EXPERIENCES.map((exp, index) => (
-              <div key={exp.id} className="relative pl-8 md:pl-12 break-inside-avoid">
-                <span className="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-slate-900"></span>
+              <div key={exp.id} className="relative pl-8 md:pl-12 break-inside-avoid group hover:scale-[1.02] transition-transform duration-300">
+                <span className="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-primary ring-4 ring-slate-900 group-hover:scale-125 transition-transform"></span>
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                     <h4 className="text-xl font-bold text-white">{exp.role}</h4>
                     <span className="inline-flex items-center text-sm text-primary font-medium mt-1 sm:mt-0">
@@ -26,7 +26,21 @@ const Experience: React.FC = () => {
                 </div>
                 <h5 className="text-lg text-slate-300 mb-4 font-medium">{exp.company}</h5>
                 <p className="text-slate-400 leading-relaxed mb-4">
-                  {exp.description}
+                  {exp.description.split('(www.storeyako.com)').map((part, i, arr) => (
+                    <React.Fragment key={i}>
+                      {part}
+                      {i < arr.length - 1 && (
+                        <a
+                          href="https://www.storeyako.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline font-medium"
+                        >
+                          www.storeyako.com
+                        </a>
+                      )}
+                    </React.Fragment>
+                  ))}
                 </p>
                 {exp.technologies && (
                   <div className="flex flex-wrap gap-2">

@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .no-print {
+    @apply print:hidden;
+  }
+}
+
+@media print {
+  @page {
+    margin: 2cm;
+  }
+
+  body {
+    background-color: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .bg-dark, .bg-slate-900, .bg-slate-950, .bg-card {
+    background-color: white !important;
+  }
+
+  .text-white, .text-slate-300, .text-slate-400, .text-slate-500 {
+    color: black !important;
+  }
+
+  .text-primary, .text-secondary {
+    color: #0284c7 !important; /* Sky 600 for better contrast on white */
+  }
+
+  .border-slate-700, .border-slate-800, .border-slate-900 {
+    border-color: #e2e8f0 !important;
+  }
+
+  section {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    page-break-inside: avoid;
+  }
+
+  .shadow-2xl, .shadow-lg, .shadow-md {
+    shadow: none !important;
+    box-shadow: none !important;
+  }
+}
