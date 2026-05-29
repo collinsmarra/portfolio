@@ -35,15 +35,13 @@ const Hero: React.FC = () => {
               <Mail className="mr-2 h-5 w-5" />
               Contact Me
             </a>
-            <a
-              href={PERSONAL_INFO.resume}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 border border-slate-700 text-base font-medium rounded-md text-slate-300 bg-transparent hover:bg-slate-800 transition-all duration-300"
+            <button
+              onClick={() => window.print()}
+              className="inline-flex items-center justify-center px-6 py-3 border border-slate-700 text-base font-medium rounded-md text-slate-300 bg-transparent hover:bg-slate-800 transition-all duration-300 no-print"
             >
               <Download className="mr-2 h-5 w-5" />
-              Download Resume
-            </a>
+              Print Resume
+            </button>
           </div>
 
           <div className="flex items-center justify-center md:justify-start space-x-6 text-slate-400 text-sm">
