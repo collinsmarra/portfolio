@@ -1,3 +1,77 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .no-print {
+    @apply print:hidden;
+  }
+}
+
+@media print {
+  @page {
+    margin: 1cm;
+    size: auto;
+  }
+
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 10pt;
+    line-height: 1.5;
+  }
+
+  .bg-dark, .bg-card, .bg-slate-900\/50 {
+    background-color: transparent !important;
+  }
+
+  .text-white, .text-slate-300, .text-slate-400 {
+    color: black !important;
+  }
+
+  .text-primary, .text-secondary {
+    color: #0284c7 !important; /* Sky 600 for better print visibility */
+  }
+
+  .border-slate-800, .border-slate-700 {
+    border-color: #e2e8f0 !important;
+  }
+
+  /* Force display of sections that might be hidden or use grid/flex in ways that don't print well */
+  main {
+    display: block !important;
+  }
+
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 1.5rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .grid {
+    display: block !important;
+  }
+
+  .grid > * {
+    margin-bottom: 1rem;
+  }
+
+  .flex-wrap {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
+
+  /* Specific adjustments for resume layout */
+  .rounded-2xl, .rounded-xl, .rounded-lg {
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  /* Ensure background decorations are hidden */
+  .blur-3xl {
+    display: none !important;
+  }
+}

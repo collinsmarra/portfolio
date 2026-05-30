@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MapPin, ChevronDown, ShieldCheck, Download } from 'lucide-react';
+import { Mail, MapPin, ChevronDown, ShieldCheck, Printer } from 'lucide-react';
 import { PERSONAL_INFO } from '../constants';
 
 const Hero: React.FC = () => {
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
             A dedicated software developer building robust backend systems and intuitive user experiences.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start no-print">
             <a 
               href={`mailto:${PERSONAL_INFO.email}`}
               className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/20"
@@ -35,15 +35,13 @@ const Hero: React.FC = () => {
               <Mail className="mr-2 h-5 w-5" />
               Contact Me
             </a>
-            <a
-              href={PERSONAL_INFO.resume}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => window.print()}
               className="inline-flex items-center justify-center px-6 py-3 border border-slate-700 text-base font-medium rounded-md text-slate-300 bg-transparent hover:bg-slate-800 transition-all duration-300"
             >
-              <Download className="mr-2 h-5 w-5" />
-              Download Resume
-            </a>
+              <Printer className="mr-2 h-5 w-5" />
+              Print Resume
+            </button>
           </div>
 
           <div className="flex items-center justify-center md:justify-start space-x-6 text-slate-400 text-sm">
