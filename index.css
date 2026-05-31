@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+
+    body {
+      background-color: white !important;
+      color: black !important;
+    }
+
+    .bg-dark, .bg-card, .bg-slate-900\/50 {
+      background-color: white !important;
+    }
+
+    .text-slate-300, .text-slate-400, .text-slate-500 {
+      color: #334155 !important;
+    }
+
+    .text-white {
+      color: black !important;
+    }
+
+    section {
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+    }
+
+    .border-slate-800, .border-slate-700 {
+      border-color: #e2e8f0 !important;
+    }
+
+    header, footer {
+        display: none !important;
+    }
+  }
+}

@@ -25,6 +25,10 @@ const About: React.FC = () => {
                 <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
                 Full Stack Developer
              </span>
+             <span className="flex items-center px-2 py-1 bg-amber-500/10 text-amber-500 rounded-md border border-amber-500/20 font-semibold animate-pulse">
+                <span className="w-2 h-2 bg-amber-500 rounded-full mr-2"></span>
+                Hobbyist
+             </span>
         </div>
       </div>
     </Section>
